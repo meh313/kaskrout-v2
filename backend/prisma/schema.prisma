@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  passwordHash String   @map("password_hash")
+  role         String   @default("user") // user, vip, admin
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+// Consumables with their prices (tuna, harissa, sardines, etc.)
+model Consumable {
+  id    Int     @id @default(autoincrement())
+  name  String  @unique
+  price Decimal @db.Decimal(10, 2) // Price per unit
+
+  // Relations
+  dailyUsages DailyConsumableUsage[]
+
+  @@map("consumables")
+}
+
+// Products with their prices (menu items)
+model Product {
+  id       Int     @id @default(autoincrement())
+  name     String  @unique
+  category String?
+  price    Decimal @db.Decimal(10, 2)
+
+  @@map("products")
+}
+
+// Daily tracking of consumables usage
+model DailyConsumableUsage {
+  id           Int      @id @default(autoincrement())
+  recordDate   DateTime @map("record_date") @db.Date
+  consumableId Int      @map("consumable_id")
+  startCount   Int      @map("start_count") @default(0)
+  endCount     Int      @map("end_count") @default(0)
+  usedCount    Int      @map("used_count") @default(0) // Auto-calculated: startCount - endCount
+  
+  // Relations
+  consumable Consumable @relation(fields: [consumableId], references: [id], onDelete: Cascade)
+
+  // Ensure one record per consumable per day
+  @@unique([recordDate, consumableId])
+  @@map("daily_consumable_usage")
+}
+
+// Daily baguettes tracking
+model DailyBaguettes {
+  recordDate DateTime @id @map("record_date") @db.Date
+  startCount Int      @map("start_count") @default(0)
+  endCount   Int      @map("end_count") @default(0)
+  usedCount  Int      @map("used_count") @default(0) // Auto-calculated: startCount - endCount
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("daily_baguettes")
+}
+
+// Daily earnings and summary
+model DailyEarnings {
+  recordDate       DateTime @id @map("record_date") @db.Date
+  totalEarnings    Decimal  @map("total_earnings") @db.Decimal(10, 2) @default(0)
+  consumablesCost  Decimal  @map("consumables_cost") @db.Decimal(10, 2) @default(0) // Auto-calculated
+  netProfit        Decimal  @map("net_profit") @db.Decimal(10, 2) @default(0) // Auto-calculated: earnings - cost
+  notes            String?
+  updatedAt        DateTime @updatedAt @map("updated_at")
+
+  @@map("daily_earnings")
+}

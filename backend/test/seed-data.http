@@ -1,0 +1,226 @@
+### Login first to get token
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "123456"
+}
+
+### ===================================
+### CONSUMABLES (المستهلكات)
+### ===================================
+
+### تن
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "تن",
+  "price": 44.5
+}
+
+### سردينة
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "سردينة",
+  "price": 11
+}
+
+### صلامي
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "صلامي",
+  "price": 4
+}
+
+### جبن
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "جبن",
+  "price": 12
+}
+
+### عضام
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "عضام",
+  "price": 8
+}
+
+### كاذخ
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "كاذخ",
+  "price": 18
+}
+
+### مالح
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "مالح",
+  "price": 2.5
+}
+
+### زيتون
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "زيتون",
+  "price": 3
+}
+
+### ماء كبير
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "ماء كبير",
+  "price": 4.5
+}
+
+### ماء صغير
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "ماء صغير",
+  "price": 3.5
+}
+
+### غازوز
+POST http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "غازوز",
+  "price": 20
+}
+
+### ===================================
+### PRODUCTS (المنتجات)
+### ===================================
+
+### كسكروت تن
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "كسكروت تن",
+  "category": "كسكروت",
+  "price": 2.2
+}
+
+### كسكروت سردينة
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "كسكروت سردينة",
+  "category": "كسكروت",
+  "price": 2.2
+}
+
+### كسكروت عضام
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "كسكروت عضام",
+  "category": "كسكروت",
+  "price": 1
+}
+
+### كسكروت صلامي
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "كسكروت صلامي",
+  "category": "كسكروت",
+  "price": 1
+}
+
+### كسكروت جبن
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "كسكروت جبن",
+  "category": "كسكروت",
+  "price": 1
+}
+
+### عضمة (إضافة)
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "عضمة",
+  "category": "إضافة",
+  "price": 0.5
+}
+
+### جبنة (إضافة)
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "جبنة",
+  "category": "إضافة",
+  "price": 0.5
+}
+
+### صلامي (إضافة)
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+Content-Type: application/json
+
+{
+  "name": "صلامي",
+  "category": "إضافة",
+  "price": 0.5
+}
+
+### ===================================
+### VERIFY DATA
+### ===================================
+
+### Get all consumables
+GET http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs
+
+### Get all products
+GET http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDMwNDY3NywiZXhwIjoxNzU0OTA5NDc3fQ.nyPGmcf95F2KDelRMyQbjy2aXda9Z2ub5hOZfTeXjHs

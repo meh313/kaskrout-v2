@@ -1,0 +1,44 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "123456",
+  "role": "vip"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "123456"
+}
+
+###
+
+GET http://localhost:5000/api/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1Mzk4NTM2OCwiZXhwIjoxNzU0NTkwMTY4fQ.XM6QG4fLbotrXxEoxmZiKIY4bV9iXYPXbSOXCYPz_F4
+
+###
+
+GET http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDA1NDk2OSwiZXhwIjoxNzU0NjU5NzY5fQ.tS-_ya-oYHScqmb9xxSsIxNCcsqP7oU8NiCf7XOLS2o
+###
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDA1NDk2OSwiZXhwIjoxNzU0NjU5NzY5fQ.tS-_ya-oYHScqmb9xxSsIxNCcsqP7oU8NiCf7XOLS2o
+Content-Type: application/json
+
+{
+  "name": "كسكروت تن",
+  "category": "ساندويتش",
+  "price": 2.2
+}
+###
+
+GET http://localhost:5000/api/consumables
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6InZpcCIsImlhdCI6MTc1NDA1NDk2OSwiZXhwIjoxNzU0NjU5NzY5fQ.tS-_ya-oYHScqmb9xxSsIxNCcsqP7oU8NiCf7XOLS2o
+
+###
