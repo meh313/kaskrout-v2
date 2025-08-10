@@ -17,11 +17,14 @@ const Layout = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const isManager = user?.role === 'vip' || user?.role === 'admin';
+
   const menuItems = [
     { path: '/', label: 'لوحة التحكم', icon: '📊' },
     { path: '/management', label: 'الإدارة', icon: '⚙️' },
     { path: '/prices', label: 'الأسعار', icon: '💰' },
     { path: '/reports', label: 'التقارير', icon: '📈' },
+    ...(isManager ? [{ path: '/users', label: 'المستخدمون', icon: '👥' }] : []),
   ];
 
   const isActive = (path) => {

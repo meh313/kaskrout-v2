@@ -6,6 +6,7 @@ const authRoutes = require('./routes/auth');
 const productsRoutes = require('./routes/products');
 const consumablesRoutes = require('./routes/consumables');
 const dailyRoutes = require('./routes/daily');
+const usersRoutes = require('./routes/users');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productsRoutes);
 app.use('/api/consumables', consumablesRoutes);
 app.use('/api/daily', dailyRoutes);
+app.use('/api/users', usersRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

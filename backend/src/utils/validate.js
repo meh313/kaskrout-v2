@@ -69,6 +69,19 @@ const saveDailyEarningsSchema = z.object({
   notes: z.string().optional(),
 });
 
+// Admin: user management
+const adminCreateUserSchema = z.object({
+  name: z.string().min(2).max(50),
+  password: z.string().min(6),
+  role: z.enum(['user', 'vip', 'admin']).default('user'),
+});
+
+const adminUpdateUserSchema = z.object({
+  name: z.string().min(2).max(50).optional(),
+  role: z.enum(['user', 'vip', 'admin']).optional(),
+  newPassword: z.string().min(6).optional(),
+});
+
 module.exports = {
   registerSchema,
   loginSchema,
@@ -81,4 +94,6 @@ module.exports = {
   updateDailyConsumableUsageSchema,
   saveDailyBaguettesSchema,
   saveDailyEarningsSchema,
+  adminCreateUserSchema,
+  adminUpdateUserSchema,
 };

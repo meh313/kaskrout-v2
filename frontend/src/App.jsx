@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Management from './pages/Management/Management';
 import Prices from './pages/Prices/Prices';
 import Reports from './pages/Reports/Reports';
+import Users from './pages/Users/Users';
 import './App.css';
 
 // Component to handle authenticated routes
@@ -27,6 +28,7 @@ const AuthenticatedApp = () => {
         <Route path="management" element={<Management />} />
         <Route path="prices" element={<Prices />} />
         <Route path="reports" element={<Reports />} />
+        <Route path="users" element={<Users />} />
       </Route>
     </Routes>
   );
