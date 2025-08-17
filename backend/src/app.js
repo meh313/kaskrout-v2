@@ -14,6 +14,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ message: 'Kaskrout API is running!', health: '/api/health' });
+});
+
 // Health check - place this BEFORE other routes
 app.get('/api/health', (req, res) => {
   res.json({ message: 'Kaskrout API is running!' });
