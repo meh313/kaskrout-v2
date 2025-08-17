@@ -14,17 +14,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Health check - place this BEFORE other routes
+app.get('/api/health', (req, res) => {
+  res.json({ message: 'Kaskrout API is running!' });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productsRoutes);
 app.use('/api/consumables', consumablesRoutes);
 app.use('/api/daily', dailyRoutes);
 app.use('/api/users', usersRoutes);
-
-// Health check
-app.get('/api/health', (req, res) => {
-  res.json({ message: 'Kaskrout API is running!' });
-});
 
 // 404 handler
 app.use('*', (req, res) => {
